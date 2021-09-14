@@ -1,0 +1,94 @@
+/*Обнуление*/
+*{padding:0;margin:0;border:0;}
+
+/*--------------------*/
+
+
+html, body{
+	height: 100%;
+	width: 100%;
+}
+.wrapper{
+	height: 100%;
+	overflow: hidden;
+}
+.wrapper__body {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: 0%;
+	transition: top 0.8s ease;
+}
+.page {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.page__title {
+	font-size: 55px;
+	position: absolute;
+	left: 0;
+	top: 100px;
+	right: 0;
+	color: #9ACD32;
+	text-align: center;
+}
+.page_one{
+	background: url('../image/fullscreen_01.JPG') center / cover no-repeat;
+}
+.page_two{
+	background: url('../image/fullscreen_02.JPG') center / cover no-repeat;
+}
+.page_three{
+	background: url('../image/fullscreen_03.JPG') center / cover no-repeat;
+}
+.page_four{
+	background: url('../image/fullscreen_04.JPG') 0 0 / cover no-repeat;
+}
+.page_five{
+	background: url('../image/fullscreen_05.JPG') 0 bottom / cover no-repeat;
+}
+.page_six{
+	background: url('../image/fullscreen_06.JPG') 0 bottom / cover no-repeat;
+}
+
+/*DOTS*/
+.dots__list{
+	position: fixed;
+	right: 30px;
+	top: 50%;
+	transform: translateY(-50%);
+	list-style: none;
+}
+.dots__item{
+	margin: 0 0 15px 0;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #9ACD32;
+	transition: all 0.8s ease;
+}
+.dots__item:last-child{
+	margin: 0;
+}
+.dots__item.active{
+	background: transparent;
+	border: 2px solid #9ACD32;
+	box-shadow: 2px 0 10px #9ACD32;
+	transform: scale(1.2, 1.2);
+}
+.dots__link{
+	display: block;
+	text-decoration: none;
+	width: 15px;
+	height: 15px;
+}
+@media (max-width: 500px){
+	.dots__list{
+		display: none;
+	}
+	.page__title{
+		font-size: 30px;
+	}
+}
